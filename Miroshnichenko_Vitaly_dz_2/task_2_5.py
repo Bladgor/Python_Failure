@@ -1,11 +1,9 @@
 def processing(number):
-    ruble = int(number // 1)
-    number += 0.0000000000001
-    penny = f'{int((number % 1) * 100):02}'
+    ruble, penny = f'{number:.2f}'.split('.')
     return f'{ruble} руб {penny} коп'
 
 
-price_list = [57.8, 46.51, 97, 49.99, 100.09, 2000, 300.09, 299.99, 3000.01, 1000]
+price_list = [57.8, 46.51, 97, 49.99, 100.09, 2000, 300.09, 299.99, 3000.01, 3000.02, 1000]
 id_1 = id(price_list)
 
 print('Цены через запятую:\n',
@@ -23,6 +21,6 @@ price_in_descending_order = sorted(price_list, reverse=True)
 print('Новый список цен по убыванию:\n',
       price_in_descending_order, '\n')
 
-five_maximum_prices = sorted([sorted(price_list, reverse=True)[i] for i in range(5)], reverse=True)
+five_maximum_prices = sorted([sorted(price_list, reverse=True)[i] for i in range(5)])
 print('Цены пяти самых дорогих товаров по возрастанию:\n',
       ', '.join(map(processing, five_maximum_prices)))

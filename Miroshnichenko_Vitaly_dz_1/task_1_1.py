@@ -19,3 +19,4 @@ for duration in duration_list:
         duration %= 60
         print(days, 'дн', hours, 'час', minutes, 'мин', duration, 'сек')
 
+# /stat@combot
