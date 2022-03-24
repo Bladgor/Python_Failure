@@ -38,6 +38,6 @@ ADVERBS = ["сегодня", "вчера", "завтра", "позавчера",
 ADJECTIVES = ["веселый", "яркий", "зеленый", "утопичный", "мягкий"]
 
 quantity = int(input('Сколько шуток вывести? '))
-repetition = input('Разрешить повторы слов в шутка? да/нет ')
+repeat_word = input('Разрешить повторы слов в шутка? (да/нет) ')
 
-print(get_jokes(num=quantity, flag=repetition))
+print(get_jokes(num=quantity, flag=repeat_word))

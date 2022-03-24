@@ -6,7 +6,7 @@ def num_translate(num, flag=False):
     if num.lower() in TRANSLATE_DICT:
         if flag:
             return TRANSLATE_DICT[num.lower()].title()
-        return TRANSLATE_DICT[num]
+        return TRANSLATE_DICT[num.lower()]
 
 
 TRANSLATE_DICT = {

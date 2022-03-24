@@ -1,10 +1,9 @@
+from pprint import pprint
 
 
 def thesaurus_adv(*name_surname):
     name_surname_dict = dict()
-    name_surname_list = list(name_surname)
-    print(name_surname_list)
-    for element in name_surname_list:
+    for element in name_surname:
         first_letter_surname = element.split()[1][0]
         first_letter_name = element.split()[0][0]
         if first_letter_surname in name_surname_dict:
@@ -29,4 +28,4 @@ name_surname_4 = "Илья Иванов"
 name_surname_5 = "Анна Савельева"
 
 
-print(thesaurus_adv(name_surname_1, name_surname_2, name_surname_3, name_surname_4, name_surname_5))
+pprint(thesaurus_adv(name_surname_1, name_surname_2, name_surname_3, name_surname_4, name_surname_5))
